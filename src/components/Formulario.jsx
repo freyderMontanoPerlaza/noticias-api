@@ -19,7 +19,7 @@ const Formulario = () => {
 
 
     //extraer categorias y funcion
-    const {categoria, handleCategoria } = useNoticias()
+    const { categoria, handleCategoria } = useNoticias()
 
 
 
@@ -29,12 +29,12 @@ const Formulario = () => {
             <FormControl fullWidth>
                 <InputLabel>Categoría</InputLabel>
 
-                <Select 
-                label='Categoria'
-                onChange={handleCategoria}
-                value={categoria}
+                <Select
+                    label='Categoria'
+                    onChange={handleCategoria}
+                    value={categoria}
 
-                
+
                 >
                     {CATEGORIAS.map(categoria => (
                         <MenuItem key={categoria.value} value={categoria.value}>

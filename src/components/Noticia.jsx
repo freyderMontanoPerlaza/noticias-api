@@ -9,11 +9,11 @@ import Grid from '@mui/material/Grid'
 
 
 
-const Noticia = ({ noticia }) => {
+const Noticia = ({ noticia, totalNoticias }) => {
 
-    console.log(noticia)
-    const { author, publishedAt, source, title, urlToImage, description,url
-    } = noticia;
+   
+
+    const {  source, title, urlToImage,description, url} = noticia;
 
     return (
         <Grid item md={6} lg={4}>
@@ -39,15 +39,16 @@ const Noticia = ({ noticia }) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
+
                     <Link
-                    href={url}
-                    target='_blank'
-                    variant='button'
-                    width={'100%'}
-                    textAlign={'center'}
-                    sx={{textDecoration:'none'}}
+                        href={url}
+                        target='_blank'
+                        variant='button'
+                        width={'100%'}
+                        textAlign={'center'}
+                        sx={{ textDecoration: 'none' }}
                     >
-                    Leer Noticias
+                        Leer Noticias
                     </Link>
                 </CardActions>
             </Card>
